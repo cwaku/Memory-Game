@@ -252,7 +252,7 @@ function gameOver() {
 
 //Change all Text content of modal elements
   modalHeader.textContent = 'Game Over';
-  modalBody.innerHTML = 'Congratulations!! You won with ' + move + ' moves, ' + time + ' seconds and ' + stars.innerHTML + ' stars';
+  modalBody.innerHTML = 'Congratulations!! You won with ' + move + ' moves, ' + time + ' seconds and ' + stars.innerHTML + ' star(s)';
   modalBody.style.fontSize = '1em';
   playBtn.textContent = 'Play again';
   playBtn.style.fontSize = '1em';
