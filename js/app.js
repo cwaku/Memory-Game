@@ -165,17 +165,17 @@ function rating() {
   while (stars.firstChild) {
     stars.removeChild(stars.firstChild);
   }
-  if(move <= 15) {
+  if(move > 30) {
+    stars.innerHTML = '<i class="star fa fa-star"></i>';
+    stars.style.color = 'red';
+  }
+  else if(move <= 15) {
     stars.innerHTML = '<i class="star fa fa-star"></i><i class="star fa fa-star"></i><i class="star fa fa-star"></i>';
     stars.style.color = 'green';
   }
   else if(15 < move < 30 ) {
     stars .innerHTML = '<i class="star fa fa-star"></i><i class="star fa fa-star"></i>';
     stars.style.color = 'yellow';
-  }
-  else {
-    stars.innerHTML = '<i class="star fa fa-star"></i>';
-    stars.style.color = 'red';
   }
 }
 
@@ -252,7 +252,7 @@ function gameOver() {
 
 //Change all Text content of modal elements
   modalHeader.textContent = 'Game Over';
-  modalBody.textContent = 'Congratulations!! You won with ' + move + ' moves with ' + time + ' seconds and ';
+  modalBody.innerHTML = 'Congratulations!! You won with ' + move + ' moves, ' + time + ' seconds and ' + stars.innerHTML + ' stars';
   modalBody.style.fontSize = '1em';
   playBtn.textContent = 'Play again';
   playBtn.style.fontSize = '1em';
