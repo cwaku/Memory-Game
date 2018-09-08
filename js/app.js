@@ -123,6 +123,8 @@ function gameLogic() {
         gameOver();
       }
       openedCards = [];
+      addMove();
+      rating();
     }
     else {
       this.classList.add('open', 'show', 'disable');
@@ -137,10 +139,6 @@ function compareCards(currentCard, previousCard) {
   currentCard.classList.add('match');
   previousCard.classList.add('match');
   matchedCards.push(currentCard, previousCard);
-
-  openedCards = [];
-  addMove();
-  rating();
   }
   else {
     //delay 1000ms and run in order to show icon on second click
@@ -149,10 +147,7 @@ function compareCards(currentCard, previousCard) {
       previousCard.classList.add('unmatch');
       currentCard.classList.remove('open', 'show', 'disable');
       previousCard.classList.remove('open', 'show', 'disable');
-
-      openedCards = [];
-      addMove();
-      rating();
+	    
       setTimeout(function() {
         removeClass('unmatch');
       },500);
