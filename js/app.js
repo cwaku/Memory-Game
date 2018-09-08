@@ -195,9 +195,9 @@ function clearTimer() {
 }
 
 function calculateTime() {
-	hours = Math.floor(time / 60 / 60);
-	minutes = Math.floor((time / 60) % 60);
-	seconds = time % 60;
+	hours = "0" + Math.floor(time / 60 / 60);
+	minutes = "0" + Math.floor((time / 60) % 60);
+	seconds = ("0" + time).slice (-2);
 }
 
 // Function for Moves
