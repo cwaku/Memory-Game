@@ -218,6 +218,7 @@ function restart() {
     move = 0;
     moves.innerHTML = '0';
     clearTimer();
+    rating();
     hoursContainer.innerHTML = '00';
     minutesContainer.innerHTML = '00';
     secondsContainer.innerHTML = '00';
